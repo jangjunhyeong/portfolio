@@ -10,23 +10,30 @@
 }
 .cover{
 	width: 100vw;
-	height: 80vh;
-	// background-image: url(/img/composition_pattern.svg);
-	// 비주얼적으로 안좋은 점 :  일단 img 화질이 안좋고, 어지러운 느낌을 준다.//
-	// 일단 조사결과 컴포지션 노트 이미지 저작권( 패턴 저작권은 없는 무료 레퍼런스다.)
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	// 해당 속성은 임의로 작성했고, 나중에 class를 attach 하는 형식으로 바꿔볼 예정이다.
-	&>div{
-		width: 25vw;
-		height: 25vh;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+	height: 100vh;
+	background-color:var(--g);
+	border-bottom: 1px solid black;
 }
-.con{
+.index{
 	width: 100vw;
 	height: 100vh;
+	background-color: var(--lg);
+	border-bottom: 1px solid black;
+
+}
+.p1{
+	width: 100vw;
+
+	// p1의 내부
+	&>div:nth-child(1){
+		width: inherit;
+		height: 100vh;
+		display: flex;
+	border-bottom: 1px solid black;
+		
+	&>div{
+		width: 80vw;
+		height: 80vh;
+	}
+	}
 }
